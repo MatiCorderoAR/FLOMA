@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Server=localhost;Database=floma;User=root;Password=floma321;" MySql.EntityFrameworkCore -OutputDir Models -Context AppDbContext -Force

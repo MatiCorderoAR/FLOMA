@@ -1,0 +1,107 @@
+﻿@model List<GestorVentas_FLOMA.Models.Ventum>
+
+@{
+    ViewData["Title"] = "Gestión de Ventas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+<button class="btn btn-success" data-toggle="modal" data-url="@Url.Action("_Create", "Ventums")" data-title="Crear Nueva Venta">
+    Crear Nueva Venta
+</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var venta in Model)
+        {
+            <tr>
+                <td>@venta.Id</td>
+                <td>@venta.Fecha.ToString("dd/MM/yyyy")</td>
+                <td>@venta.IdClienteNavigation.Nombre</td>
+                <td>@venta.IdDetalleProductoNavigation.IdProductoNavigation.Nombre @venta.IdDetalleProductoNavigation.Descripcion</td>
+                <td>@venta.Precio</td>
+                <td>@venta.Descripcion</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@venta.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@venta.Id">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@venta.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Evento click en los botones que abren el modal
+            $('button[data-toggle="modal"]').on('click', function () {
+                var url = $(this).data('url');
+                var title = $(this).data('title');
+
+                $('#publicModalLabel').text(title);
+
+                $.get(url, function (data) {
+                    $('#publicModalBody').html(data);
+                    $('#publicModal').modal('show');
+                    initializeSelect2(); // Inicializar select2 después de cargar la vista parcial
+                });
+            });
+            $(document).on('change', '#idDetalleProducto', function () {
+                var productoId = $(this).val();
+                if (productoId) {
+                    // Realizar la solicitud AJAX para obtener el precio del producto
+                    $.ajax({
+                        url: '@Url.Action("ObtenerPrecioProducto", "Producto")', // Endpoint en tu controlador para obtener el precio
+                        type: 'POST',
+                        data: { idProducto: productoId },
+                        success: function (precio) {
+                            $('#precio').val(precio);
+                        },
+                        error: function () {
+                            alert('Error al obtener el precio del producto.');
+                        }
+                    });
+                } else {
+                    $('#precio').val(''); // Limpiar el campo de precio si no se selecciona ningún producto
+                }
+            });
+            $(document).on('change', '#idCliente', function () {
+                var clienteId = $(this).val();
+                if (clienteId) {
+                    // Realizar la solicitud AJAX para obtener el precio del producto
+                    $.ajax({
+                        url: '@Url.Action("ObtenerDomcilioCliente", "Clientes")', // Endpoint en tu controlador para obtener el precio
+                        type: 'POST',
+                        data: { idProducto: productoId },
+                        success: function (precio) {
+                            $('#precio').val(precio);
+                        },
+                        error: function () {
+                            alert('Error al obtener el precio del producto.');
+                        }
+                    });
+                } else {
+                    $('#precio').val(''); // Limpiar el campo de precio si no se selecciona ningún producto
+                }
+            });
+            // Inicializar select2
+            function initializeSelect2() {
+                $('#idDetalleProducto, #idVendedor, #idCliente').select2({
+                    width: '100%',
+                });
+            }
+        });
+    </script>
+}
