@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestorVentas-FLOMA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d40bf329790584cc32a797d8de194e3dc44bd931")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestorVentas-FLOMA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestorVentas-FLOMA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

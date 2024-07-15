@@ -9,11 +9,11 @@ using GestorVentas_FLOMA.Models;
 
 namespace GestorVentas_FLOMA.Controllers
 {
-    public class DetalleproductoesController : Controller
+    public class ProductoController : Controller
     {
         private readonly FlomaContext _context;
 
-        public DetalleproductoesController(FlomaContext context)
+        public ProductoController(FlomaContext context)
         {
             _context = context;
         }
@@ -43,7 +43,22 @@ namespace GestorVentas_FLOMA.Controllers
 
             return View(detalleproducto);
         }
+        [HttpPost]
+        public decimal ObtenerPrecioProducto(int idProducto)
+        {
+            // Aquí debes escribir la lógica para obtener el precio del producto según su ID
+            var cliente = _context.Detalleproductos.FirstOrDefault(p => p.IdDetalle == idProducto);
 
+            if (cliente != null && cliente.PrecioVenta != null)
+            {
+                // Suponiendo que el precio está almacenado en la propiedad PrecioVenta
+                return cliente.PrecioVenta.Value;
+            }
+            else
+            {
+                return 0; // O cualquier otro valor por defecto que decidas
+            }
+        }
         // GET: Detalleproductoes/Create
         public IActionResult Create()
         {

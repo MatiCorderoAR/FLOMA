@@ -74,7 +74,7 @@
                         }
                     });
                 } else {
-                    $('#precio').val(''); // Limpiar el campo de precio si no se selecciona ningún producto
+                    $('#precio').val(0); // Limpiar el campo de precio si no se selecciona ningún producto
                 }
             });
             $(document).on('change', '#idCliente', function () {
@@ -82,18 +82,18 @@
                 if (clienteId) {
                     // Realizar la solicitud AJAX para obtener el precio del producto
                     $.ajax({
-                        url: '@Url.Action("ObtenerDomcilioCliente", "Clientes")', // Endpoint en tu controlador para obtener el precio
+                        url: '@Url.Action("ObtenerDomcilioCliente", "Cliente")', // Endpoint en tu controlador para obtener el precio
                         type: 'POST',
-                        data: { idProducto: productoId },
-                        success: function (precio) {
-                            $('#precio').val(precio);
+                        data: { idCliente: clienteId },
+                        success: function (domicilio) {
+                            $('#DomicilioEntrega').val(domicilio);
                         },
                         error: function () {
                             alert('Error al obtener el precio del producto.');
                         }
                     });
                 } else {
-                    $('#precio').val(''); // Limpiar el campo de precio si no se selecciona ningún producto
+                    $('#DomicilioEntrega').val(''); // Limpiar el campo de precio si no se selecciona ningún producto
                 }
             });
             // Inicializar select2

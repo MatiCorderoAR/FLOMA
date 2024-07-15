@@ -3,11 +3,11 @@
 <form asp-controller="Ventums" asp-action="Create" method="post">
     <div class="modal-body">
         <div class="form-group">
-            <label for="fecha">Fecha:</label>
+            <label for="fecha"><b>Fecha:</b></label>
             <input type="date" class="form-control" id="fecha" name="fecha" required value="@DateTime.Now.ToString("yyyy-MM-dd")">
         </div>
         <div class="form-group">
-            <label for="idDetalleProducto">Detalle del Producto:</label>
+            <label for="idDetalleProducto"><b>Detalle del Producto:</b></label>
             <select class="form-control" id="idDetalleProducto" name="idDetalleProducto" asp-items="ViewBag.DetalleProductos">
                 <option value="">Seleccione Producto</option>
                 @foreach (var producto in ViewBag.DetalleProductos)
@@ -17,7 +17,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="precio">Precio:</label>
+            <label for="precio"><b>Precio:</b></label>
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">$</span>
@@ -26,11 +26,11 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="cantidad">Cantidad:</label>
+            <label for="cantidad"><b>Cantidad:</b></label>
             <input type="number" class="form-control" id="cantidad" name="cantidad" value="1" required>
         </div>
         <div class="form-group">
-            <label for="idCliente">Cliente:</label>
+            <label for="idCliente"><b>Cliente:</b></label>
             <select class="form-control" id="idCliente" name="idCliente" asp-items="ViewBag.Clientes">
                 <option value="">Seleccione un Cliente</option>
                 @foreach (var cliente in ViewBag.Clientes)
@@ -40,21 +40,21 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="DomicilioEntrega">Domicilio:</label>
+            <label for="DomicilioEntrega"><b>Domicilio:</b></label>
             <input type="text" class="form-control" id="DomicilioEntrega" name="DomicilioEntrega" required>
         </div>
         <div class="form-group">
-            <label for="fechaEntrega">Fecha Entrega:</label>
+            <label for="fechaEntrega"><b>Fecha Entrega:</b></label>
             <input type="date" class="form-control" id="fechaEntrega" name="fechaEntrega">
         </div>
         <div class="form-group">
-            <label for="idVendedor">Vendedor:</label>
+            <label for="idVendedor"><b>Vendedor:</b></label>
             <select class="form-control" id="idVendedor" name="idVendedor" asp-items="ViewBag.Vendedores">
                 <option value="">Seleccione un Vendedor</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="descripcion">Descripcion:</label>
+            <label for="descripcion"><b>Descripcion:</b></label>
             <input type="text" class="form-control" id="descripcion" name="descripcion">
         </div>
     </div>
@@ -71,31 +71,6 @@
 
     <script>
         $(document).ready(function () {
-            $('#idDetalleProducto').on('change', function () {
-                console.log("hola");
-                var productoId = $(this).val();
-                if (productoId) {
-                    // Realizar la solicitud AJAX para obtener el precio del producto
-                    $.ajax({
-                        url: '/Producto/ObtenerPrecioProducto', // Endpoint en tu controlador para obtener el precio
-                        type: 'GET',
-                        data: { idProducto: productoId },
-                        success: function (precio) {
-                            $('#precio').val(precio);
-                        },
-                        error: function () {
-                            alert('Error al obtener el precio del producto.');
-                        }
-                    });
-                } else {
-                    $('#precio').val(''); // Limpiar el campo de precio si no se selecciona ningún producto
-                }
-            });
-
-            $('#idCliente').on('change', function () {
-                var direccion = $(this).find(':selected').data('direccion');
-                $('#DomicilioEntrega').val(direccion);
-            });
         });
     </script>
 }

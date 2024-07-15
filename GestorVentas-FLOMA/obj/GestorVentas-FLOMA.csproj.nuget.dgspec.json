@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matut\\source\\repos\\GestorVentas-FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj": {}
+    "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matut\\source\\repos\\GestorVentas-FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj": {
+    "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matut\\source\\repos\\GestorVentas-FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
+        "projectUniqueName": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
         "projectName": "GestorVentas-FLOMA",
-        "projectPath": "C:\\Users\\matut\\source\\repos\\GestorVentas-FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
+        "projectPath": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
         "packagesPath": "C:\\Users\\matut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matut\\source\\repos\\GestorVentas-FLOMA\\GestorVentas-FLOMA\\obj\\",
+        "outputPath": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\matut\\AppData\\Roaming\\NuGet\\NuGet.Config",

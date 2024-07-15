@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WL02i9xbJqg=",
+  "dgSpecHash": "1hXVUtCSR04=",
   "success": true,
-  "projectFilePath": "C:\\Users\\matut\\source\\repos\\GestorVentas-FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
+  "projectFilePath": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matut\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\matut\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
