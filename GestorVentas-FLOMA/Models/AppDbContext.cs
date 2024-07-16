@@ -15,11 +15,15 @@ public partial class AppDbContext : DbContext
     {
     }
 
+    public virtual DbSet<Celular> Celulars { get; set; }
+
     public virtual DbSet<Cliente> Clientes { get; set; }
 
     public virtual DbSet<Descuento> Descuentos { get; set; }
 
     public virtual DbSet<Detalleproducto> Detalleproductos { get; set; }
+
+    public virtual DbSet<Fundaxcelular> Fundaxcelulars { get; set; }
 
     public virtual DbSet<Producto> Productos { get; set; }
 
@@ -33,6 +37,17 @@ public partial class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Celular>(entity =>
+        {
+            entity.HasKey(e => e.IdCelular).HasName("PRIMARY");
+
+            entity.ToTable("celular");
+
+            entity.Property(e => e.IdCelular).HasColumnName("idCelular");
+            entity.Property(e => e.Marca).HasMaxLength(45);
+            entity.Property(e => e.Modelo).HasMaxLength(45);
+        });
+
         modelBuilder.Entity<Cliente>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
@@ -98,6 +113,30 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey(d => d.IdProducto)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("idProducto");
+        });
+
+        modelBuilder.Entity<Fundaxcelular>(entity =>
+        {
+            entity.HasKey(e => new { e.IdFunda, e.IdCelular }).HasName("PRIMARY");
+
+            entity.ToTable("fundaxcelular");
+
+            entity.HasIndex(e => e.IdCelular, "idCelular_idx");
+
+            entity.Property(e => e.IdFunda).HasColumnName("idFunda");
+            entity.Property(e => e.IdCelular).HasColumnName("idCelular");
+            entity.Property(e => e.Costo).HasColumnName("costo");
+            entity.Property(e => e.PrecioVenta).HasColumnName("precioVenta");
+
+            entity.HasOne(d => d.IdCelularNavigation).WithMany(p => p.Fundaxcelulars)
+                .HasForeignKey(d => d.IdCelular)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("idCelular");
+
+            entity.HasOne(d => d.IdFundaNavigation).WithMany(p => p.Fundaxcelulars)
+                .HasForeignKey(d => d.IdFunda)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("idFunda");
         });
 
         modelBuilder.Entity<Producto>(entity =>

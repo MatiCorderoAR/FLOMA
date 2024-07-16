@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CC488B31-8C9E-435B-9288-B2E78BB3B1A2}|GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj|c:\\users\\matut\\onedrive\\documentos\\github\\floma\\gestorventas-floma\\conexion.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CC488B31-8C9E-435B-9288-B2E78BB3B1A2}|GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj|solutionrelative:gestorventas-floma\\conexion.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CC488B31-8C9E-435B-9288-B2E78BB3B1A2}|GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj|c:\\users\\matut\\onedrive\\documentos\\github\\floma\\gestorventas-floma\\views\\ventums\\_create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CC488B31-8C9E-435B-9288-B2E78BB3B1A2}|GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj|solutionrelative:gestorventas-floma\\views\\ventums\\_create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "conexion.txt",
+              "DocumentMoniker": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\conexion.txt",
+              "RelativeDocumentMoniker": "GestorVentas-FLOMA\\conexion.txt",
+              "ToolTip": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\conexion.txt",
+              "RelativeToolTip": "GestorVentas-FLOMA\\conexion.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-07-16T21:00:20.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_Create.cshtml",
               "DocumentMoniker": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\Views\\Ventums\\_Create.cshtml",
               "RelativeDocumentMoniker": "GestorVentas-FLOMA\\Views\\Ventums\\_Create.cshtml",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "GestorVentas-FLOMA\\Views\\Home\\Index.cshtml",
@@ -51,12 +68,11 @@
               "RelativeToolTip": "GestorVentas-FLOMA\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAADwAAAAAAAAAAAAAAFQAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-15T22:32:23.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T22:32:23.487Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ClienteController.cs",
               "DocumentMoniker": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\Controllers\\ClienteController.cs",
               "RelativeDocumentMoniker": "GestorVentas-FLOMA\\Controllers\\ClienteController.cs",
@@ -64,12 +80,11 @@
               "RelativeToolTip": "GestorVentas-FLOMA\\Controllers\\ClienteController.cs",
               "ViewState": "AQIAACYAAAAAAAAAAAAgwCwAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T22:32:05.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T22:32:05.887Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProductoController.cs",
               "DocumentMoniker": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\Controllers\\ProductoController.cs",
               "RelativeDocumentMoniker": "GestorVentas-FLOMA\\Controllers\\ProductoController.cs",
@@ -77,8 +92,7 @@
               "RelativeToolTip": "GestorVentas-FLOMA\\Controllers\\ProductoController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAmwDEAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T22:31:48.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T22:31:48.392Z"
             }
           ]
         }

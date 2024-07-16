@@ -19,6 +19,8 @@ public partial class Detalleproducto
 
     public ulong Active { get; set; }
 
+    public virtual ICollection<Fundaxcelular> Fundaxcelulars { get; set; } = new List<Fundaxcelular>();
+
     public virtual Producto IdProductoNavigation { get; set; } = null!;
 
     public virtual ICollection<Ventum> Venta { get; set; } = new List<Ventum>();
