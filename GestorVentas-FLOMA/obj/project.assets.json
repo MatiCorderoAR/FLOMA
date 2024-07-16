@@ -7492,11 +7492,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
+      "projectUniqueName": "D:\\FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
       "projectName": "GestorVentas-FLOMA",
-      "projectPath": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
+      "projectPath": "D:\\FLOMA\\GestorVentas-FLOMA\\GestorVentas-FLOMA.csproj",
       "packagesPath": "C:\\Users\\matut\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matut\\OneDrive\\Documentos\\GitHub\\FLOMA\\GestorVentas-FLOMA\\obj\\",
+      "outputPath": "D:\\FLOMA\\GestorVentas-FLOMA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\matut\\AppData\\Roaming\\NuGet\\NuGet.Config",
